@@ -1,0 +1,4 @@
+registry = <%= @params.registry %>
+<% if @params.auth is not nil %>_auth = <%= @params.auth %><% end %>
+<% if @params.alwaysAuth is not nil %>always-auth = <%= @params.alwaysAuth %><% end %>
+<% if @params.email is not nil %>email = <%= @params.email %><% end %>
