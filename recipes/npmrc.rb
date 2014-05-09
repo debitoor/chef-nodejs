@@ -17,7 +17,7 @@ auth = node['npm']['npmrc']['_auth']
 email = node['npm']['npmrc']['email']
 alwaysAuth = node['npm']['npmrc']['always-auth']
 
-daptiv_site_npm_registry "#{app_name}_npm_registry" do
+nodejs_npm_registry "nodejs_npm_registry" do
   registry registry
   auth auth
   email email
