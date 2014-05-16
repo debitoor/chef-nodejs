@@ -1,4 +1,4 @@
-npmrc_path = File.join(ENV['HOME'], '\\.npmrc')
+npmrc_path = ::File.join(ENV['HOME'], '\\.npmrc')
 
 action :generate do
 

@@ -1,6 +1,6 @@
 #
 # Author:: Adam Kalman (<akalman@daptiv.com>)
-# Cookbook Name:: npmjs
+# Cookbook Name:: nodejs
 # Recipe:: npmrc
 #
 # Copyright (c) 2014 Daptiv Solutions LLC.
@@ -12,10 +12,10 @@
 # from our internal npm registry.
 #
 
-registry = node['npm']['npmrc']['registry']
-auth = node['npm']['npmrc']['_auth']
-email = node['npm']['npmrc']['email']
-alwaysAuth = node['npm']['npmrc']['always-auth']
+registry = node['nodejs']['npmrc']['registry']
+auth = node['nodejs']['npmrc']['_auth']
+email = node['nodejs']['npmrc']['email']
+alwaysAuth = node['nodejs']['npmrc']['always-auth']
 
 nodejs_npm_registry "nodejs_npm_registry" do
   registry registry
