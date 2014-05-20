@@ -39,6 +39,8 @@ default['nodejs']['checksum_windows_x86'] =
 default['nodejs']['msi_url_x86'] = node['nodejs']['src_url'] +
   "/v#{node['nodejs']['version']}/node-v#{node['nodejs']['version']}-x86.msi"
 
+default['nodejs']['force_32bit_msi'] = false
+
 if platform?('windows')
   default['nodejs']['install_method'] = 'windows'
   default['nodejs']['dir'] = ::File.join('c:', 'Program Files', 'nodejs')

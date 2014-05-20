@@ -24,6 +24,10 @@ helper = NodejsCookbook::Helper.new(node)
 installed_version = helper.installed_version()
 arch = node['kernel']['machine'] =~ /x86_64/ ? 'x64' : 'x86'
 
+if node['nodejs']['force_32bit_msi']
+  arch = 'x86'
+end
+
 windows_package node['nodejs']['package_name'] do
   source node['nodejs']["msi_url_#{arch}"]
   checksum node['nodejs']["checksum_windows_#{arch}"]
